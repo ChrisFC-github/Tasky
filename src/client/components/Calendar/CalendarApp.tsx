@@ -62,11 +62,6 @@ class CalendarApp extends Component<ICalendarAppProps> {
                     />
                 </div>
 
-
-
-                <div>
-                    < CreateEvent />
-                </div>
             </>
 
         );
