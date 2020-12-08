@@ -1,42 +1,47 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import TaskCard from './Reminders/TaskCard';
+import TaskCard from './Reminders/TaskCard'
 
 
-const TaskTimeline = () => {
-    const [task, setTask] = useState<ITasks[]>([]);
+
+const TaskList = () => {
+    const [events, setEvents] = useState<IEvents[]>([]);
 
     useEffect(() => {
-        const getTasks = async () => {
+        const getEvents = async () => {
             let res = await fetch('/api/events/mandatory');
             if (res.ok) {
-                let tasks = await res.json();
-                setTask(tasks);
+                let events = await res.json();
+                setEvents(events);
             }
         }
-        getTasks();
+        getEvents();
     }, []);
 
     return (
 
         
-  <div className="card-body">
-  <ul className="reminder-list-group list-group-flush">
-  {task.map((events) => (<TaskCard task={events} key={events.id} />))}
-  </ul>
-  {/* {events.title} */}
-  {events.start, events.end}
+  <div className="task-card-body mx-5">
+  <ol className="task-list-group d-flex justify-content-left list-group-flush">
+  {events.map((events) => (<TaskCard events={events} key={events.id} />))}
+  </ol>
   </div>
   
     )
 }
 
-interface ITasks {
+interface IEvents {
     id: string,
-    reminderid: string,
-    content: string,
-    relationid: number,
-    childnum: number
+    title: string,
+    location: string,
+    date: string
+    start: string,
+    end: string,
+  //  duedate: string,
+    mandatorytask: boolean,
+  //  completedtask: string,
+    //relationid: string,
+    //childnum: string
 }
 
-export default TaskTimeline;
+export default TaskList;
