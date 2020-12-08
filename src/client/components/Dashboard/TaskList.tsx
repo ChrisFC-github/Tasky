@@ -8,7 +8,7 @@ const TaskTimeline = () => {
 
     useEffect(() => {
         const getTasks = async () => {
-            let res = await fetch('/api/events');
+            let res = await fetch('/api/events/mandatory');
             if (res.ok) {
                 let tasks = await res.json();
                 setTask(tasks);
@@ -22,9 +22,10 @@ const TaskTimeline = () => {
         
   <div className="card-body">
   <ul className="reminder-list-group list-group-flush">
-  {task.map((task) => (<TaskCard task={task} key={events.id} />))}
+  {task.map((events) => (<TaskCard task={events} key={events.id} />))}
   </ul>
   {/* {events.title} */}
+  {events.start, events.end}
   </div>
   
     )

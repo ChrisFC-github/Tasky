@@ -5,8 +5,8 @@ const retrieveallEvents = () => Query(`SELECT * FROM events;`);
 
 const retrievespecEvent = (eventid) => Query("SELECT * FROM events WHERE events.id = ?;", [eventid]);
 
-const createEvent = (title, location, date, start, end) => Query(`INSERT INTO events (title, location, date, start, end) 
-VALUES (?, ?, ?, ?, ?);`, [title, location, date, start, end]);
+const createEvent = (title, location, date, start, end, mandatorytask) => Query(`INSERT INTO events (title, location, date, start, end, mandatorytask) 
+VALUES (?, ?, ?, ?, ?, ?);`, [title, location, date, start, end, mandatorytask]);
 
 const updateEvent = (title, location, date, start, end, duedate, mandatorytask, completedtask, relationid, childnum, eventid) => Query(`
 UPDATE events
@@ -23,10 +23,16 @@ WHERE events.relationid = ? AND events.childnum = ? AND events.id = ?;`, [title,
 
 const removeEvent = (eventid) => Query(`DELETE FROM events WHERE events.id = ?;`, [eventid]);
 
+const mandatoryEvents = () => Query(`
+SELECT * FROM events
+WHERE mandatorytask = 1;
+`);
+
 export default {
     retrieveallEvents,
     retrievespecEvent,
     createEvent,
     updateEvent,
-    removeEvent
+    removeEvent,
+    mandatoryEvents
 }
