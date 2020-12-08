@@ -7,8 +7,8 @@ import CreateEvent from '../Dashboard/Events/CreateEvent'
 const localizer = momentLocalizer(moment);
 // const DnDCalendar = withDragAndDrop(Calendar);
 
-class CalendarApp extends Component<ICalendarAppProps> {
-    constructor(props: ICalendarAppProps) {
+class App extends Component<IAppProps> {
+    constructor(props: IAppProps) {
         super(props);
         this.state = {
             events: [
@@ -54,7 +54,8 @@ class CalendarApp extends Component<ICalendarAppProps> {
                 <div className="CalendarContainer my-2 mx-2 py-2 px-2">
                     <Calendar
                         defaultDate={moment().toDate()}
-                        defaultView="month"
+                        defaultView={'month'}
+                        views={["month", "week", "day", "agenda"]}
                         events={this.state.events}
                         localizer={localizer}
                         style={{ height: "100vh" }}
@@ -73,9 +74,9 @@ class CalendarApp extends Component<ICalendarAppProps> {
     }
 }
 
-interface ICalendarAppProps { }
-interface ICalendarAppState {
+interface IAppProps { }
+interface IAppState {
     events: Array<object>
 }
 
-export default CalendarApp;
+export default App;

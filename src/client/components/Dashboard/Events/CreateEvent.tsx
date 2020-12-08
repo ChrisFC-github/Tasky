@@ -30,7 +30,10 @@ export default class newEvent extends React.Component<IAppProps, IAppState> {
                 <h1>Create New Event</h1>
                 <input id="username-input" placeholder="Event Title"className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ title: e.target.value }) }} value={this.state.title} />
                 <input id="username-input" placeholder="Location"className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ location: e.target.value }) }} value={this.state.location} />
-                <input id="username-input" placeholder="Date MM/DD/YYYY" className="form-control mx-2 my-2 px-2 py-2 col-8" type="datetime-local" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ date: e.target.value }) }} value={this.state.date} />
+                {/* <input id="username-input" placeholder="Date MM/DD/YYYY" className="form-control mx-2 my-2 px-2 py-2 col-8" type="date" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ date: e.target.value }) }} value={this.state.date} /> */}
+                <input id="username-input" placeholder="Date MM/DD/YYYY" className="form-control mx-2 my-2 px-2 py-2 col-8" type="datetime-local" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ start: e.target.value }) }} value={this.state.start} />
+                <input id="username-input" placeholder="Date MM/DD/YYYY" className="form-control mx-2 my-2 px-2 py-2 col-8" type="datetime-local" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ end: e.target.value }) }} value={this.state.end} />
+                {/* <input id="username-input" placeholder="Date MM/DD/YYYY" className="form-control mx-2 my-2 px-2 py-2 col-8" type="datetime-local" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ date: e.target.value }) }} value={this.state.end} /> */}
                 {/* <input id="username-input" placeholder="Start-Time"className="form-control mx-2 my-2 px-2 py-2 col-8" type="time" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ start: e.target.value }) }} value={this.state.start} />
                 <input id="username-input" placeholder="End-Time"className="form-control mx-2 my-2 px-2 py-2 col-8" type="time" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ end: e.target.value }) }} value={this.state.end} /> */}
                 {/* <input id="username-input" placeholder="Due Date"className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ duedate: e.target.value }) }} value={this.state.duedate} />
@@ -38,7 +41,7 @@ export default class newEvent extends React.Component<IAppProps, IAppState> {
                 {/* <input id="username-input" className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ completedtask: e.target.value }) }} value={this.state.completedtask}></input>
                 <input id="username-input" className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ relationid: e.target.value }) }} value={this.state.relationid}></input>
                 <input id="username-input" className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ childnum: e.target.value }) }} value={this.state.childnum}></input> */}
-                <button className="add-event-btn" type="submit" onClick={() => this.submitEvent(this.state.title, this.state.location, this.state.time, this.state.duedate, this.state.mandatorytask, this.state.completedtask, this.state.relationid, this.state.childnum)}>
+                <button className="btn btn-info" type="submit" onClick={() => this.submitEvent(this.state.title, this.state.location, this.state.date, this.state.start, this.state.end)}>
                     Submit Event!
                         </button>
             </div>
