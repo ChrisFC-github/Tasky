@@ -7,11 +7,11 @@ const Profile = () => {
 
   return (
     isAuthenticated && ( 
-     <div>
-        <img src={user.picture} alt={user.name} />
+     <div className="profile-container">
+        <img className="profile-img" src={user.picture} alt={user.name} />
         <h2>{user.name}</h2>
-        <p>{user.email}</p>
-        <p>{user.sub}</p>
+        {/* <h5>{user.email}</h5> */}
+        {/* <p>{user.sub}</p> */}
         {/* <JSONPretty data={user} /> */}
         {/* {JSON.stringify(user, null, 2)} */}
       </div>

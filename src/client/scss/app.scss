@@ -398,7 +398,6 @@
 
 .reminder-list-group {
   background-color: rgb(255, 255, 255);
-  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -458,14 +457,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: solid rgb(225, 225, 225) 1px;
+  border-bottom: solid rgb(225, 225, 225) 3px;
   border-radius: 5px;
-  margin: 20px;
-  padding: 20px;
+  padding: 10px;
+  margin-right: 50px;
 }
 
 .reminders-header-text {
   color: #414141;
+}
+
+.li-div {
+  margin-right: 10px;
 }
 
 
@@ -553,10 +556,30 @@
 
 .CalendarContainer {
   background-color: #ffffff;
-  box-shadow: -8px 20px 30px 10px rgb(167, 167, 167);
+  box-shadow: -8px 20px 30px 10px rgb(206, 206, 206);
   border-radius: 10px;
   padding: 1em;
   margin-bottom: 2em;
   margin: 2em;
   border: solid white 30px;
+}
+
+.profile-container {
+  width: 20em;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  // margin: 3em;
+  // padding: 20px;
+}
+
+.profile-img {
+  border-radius: 50px;
+  border: solid #E68568 3px;
+  -webkit-filter: grayscale(100%);
+  margin-right: -10px;
+  margin-bottom: 10px;
+}
+
+.auth0-lock-submit {
+  background-color: black;
 }
