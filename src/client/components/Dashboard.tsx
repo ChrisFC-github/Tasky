@@ -45,8 +45,13 @@ const Dashboard: React.FC<IDashboardProps> = () => {
           <CalendarApp />
         </div>
       </div>
+    
+    <div>
+    <Messages />
     </div>
-
+    
+    </div>
+      
     
   );
 };
