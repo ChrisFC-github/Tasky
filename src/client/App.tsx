@@ -24,9 +24,6 @@ const App: React.FC<IAppProps> = () => {
           className="d-flex justify-content-left mx-auto"
           id="main-logo"
         ></img>
-
-        <h1 className="text-light">TASKY</h1>
-
         <LoginButton />
         <LogoutButton />
       </nav>
