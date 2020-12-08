@@ -61,12 +61,6 @@ class CalendarApp extends Component<ICalendarAppProps> {
                         onSelectEvent={}
                     />
                 </div>
-
-
-
-                <div>
-                    < CreateEvent />
-                </div>
             </>
 
         );

@@ -26,11 +26,13 @@ export default class newEvent extends React.Component<IAppProps, IAppState> {
     }
     render() {
         return (
-            <div className="box shadow">
-                <h1>Create New Event</h1>
+            <div className="create-event-container">
+                <h1 className="create-event-h1-text">Create New Event</h1>
                 <input id="username-input" placeholder="Event Title"className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ title: e.target.value }) }} value={this.state.title} />
                 <input id="username-input" placeholder="Location"className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ location: e.target.value }) }} value={this.state.location} />
-                <input id="username-input" placeholder="Date MM/DD/YYYY" className="form-control mx-2 my-2 px-2 py-2 col-8" type="datetime-local" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ date: e.target.value }) }} value={this.state.date} />
+                <input id="username-input" placeholder="Date MM/DD/YYYY" className="form-control mx-2 my-2 px-2 py-2 col-8" type="datetime-local" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ start: e.target.value }) }} value={this.state.start} />
+                <input id="username-input" placeholder="Date MM/DD/YYYY" className="form-control mx-2 my-2 px-2 py-2 col-8" type="datetime-local" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ end: e.target.value }) }} value={this.state.end} />
+                {/* <input id="username-input" placeholder="Date MM/DD/YYYY" className="form-control mx-2 my-2 px-2 py-2 col-8" type="datetime-local" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ date: e.target.value }) }} value={this.state.date} /> */}
                 {/* <input id="username-input" placeholder="Start-Time"className="form-control mx-2 my-2 px-2 py-2 col-8" type="time" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ start: e.target.value }) }} value={this.state.start} />
                 <input id="username-input" placeholder="End-Time"className="form-control mx-2 my-2 px-2 py-2 col-8" type="time" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ end: e.target.value }) }} value={this.state.end} /> */}
                 {/* <input id="username-input" placeholder="Due Date"className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ duedate: e.target.value }) }} value={this.state.duedate} />
