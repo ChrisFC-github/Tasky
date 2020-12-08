@@ -10,7 +10,7 @@ const ReminderCard: React.FC<IReminderCardProps> = (props) => {
     return (
         <div className="reminder-list-container">
             <ol className="list-group list-group-flush"> 
-            <h5 className="reminder-list-group-item justify-content-left">{props.reminder.content}</h5>
+            <h5 className="reminder-list-group-item">{props.reminder.content}</h5>
             <Link to={`/${props.reminder.id}/edit`} >
                 <button
                     type="button"

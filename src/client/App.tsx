@@ -26,8 +26,7 @@ const App: React.FC<IAppProps> = () => {
           id="main-logo"
         ></img>
 
-        <h1 className="text-light">TASKY</h1>
-        <CalendarButton />
+
         <LoginButton />
         <LogoutButton />
       </nav>
