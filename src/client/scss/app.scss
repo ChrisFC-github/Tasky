@@ -265,9 +265,18 @@
 
   // create event styling
 
+  .form-check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // margin: 2em;
+  }
+
   .mand {
     color: black;
     float: left;
+    margin-bottom: 80px;
   }
 
 .create-event-container {
@@ -372,12 +381,43 @@
   color: #414141;
   box-shadow: -8px 20px 30px 10px rgb(181, 181, 181);
   border-radius: 10px;
-  margin-bottom: 3em;
+  margin: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.list-group-item {
+.bulletPoints {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+
+// .task-list-group-item {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .task-list-container {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+.task-list {
   background-color: rgb(255, 255, 255);
-  color: #414141;
+  box-shadow: -8px 20px 30px 10px rgb(181, 181, 181);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 

@@ -41,8 +41,9 @@ export default class newEvent extends React.Component<IAppProps, IAppState> {
                     <input id="username-input" placeholder="Date MM/DD/YYYY" className="form-control mx-2 my-2 px-2 py-2 col-8" type="date" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ date: e.target.value }) }} value={this.state.date} />
                     <input id="start-input" placeholder="Date MM/DD/YYYY" className="form-control mx-2 my-2 px-2 py-2 col-8" type="datetime-local" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ start: e.target.value }) }} value={this.state.start} />
                     <input id="end-input" placeholder="Date MM/DD/YYYY" className="form-control mx-2 my-2 px-2 py-2 col-8" type="datetime-local" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ end: e.target.value }) }} value={this.state.end} />
-                    <div className="form-check">
-                    <p className="mand">Mandatory?</p>
+                    {/* checkbox */}
+                    <div className="form-check my-1">
+                    <p className="mand">Check box for mandatory event</p>
                     <input className="form-check-input" type="checkbox" value="" id="defaultCheck1" onClick={() => this.setMandatory()} />
                             
                     </div>

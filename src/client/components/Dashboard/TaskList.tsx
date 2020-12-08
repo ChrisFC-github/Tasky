@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import TaskCard from './Reminders/TaskCard'
-
+import '../../scss/app.scss'
 
 
 const TaskList = () => {
@@ -21,10 +21,11 @@ const TaskList = () => {
     return (
 
         
-  <div className="task-card-body mx-5">
-  <ol className="task-list-group d-flex justify-content-left list-group-flush">
+  <div className="task-list justify-content-center text-center mx-5">
+      <h2>Tommy's Tasks For Today</h2>
+  <div className="d-flex justify-content-left list-group-flush bulletPoints">
   {events.map((events) => (<TaskCard events={events} key={events.id} />))}
-  </ol>
+  </div>
   </div>
   
     )

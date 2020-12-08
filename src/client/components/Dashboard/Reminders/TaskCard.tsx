@@ -8,11 +8,11 @@ const TaskCard: React.FC<IEvents> = (props) => {
 
 
     return (
-        <div className="reminder-list-container">
-            <ol className="list-group list-group-flush"> 
-            <h5 className="reminder-list-group-item">{props.events.title}</h5>
-            </ol>
-        </div>
+        
+            <li className="task-list-group-item"> 
+            {props.events.title}
+            </li>
+      
     )
 };
 

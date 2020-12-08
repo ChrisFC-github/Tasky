@@ -41,7 +41,7 @@ const Dashboard: React.FC<IDashboardProps> = () => {
         <div className="row">
           <div className="col-6">
           <TaskList />
-          <Messages />
+          
           </div>
           
           <div className="col-6">
@@ -56,6 +56,11 @@ const Dashboard: React.FC<IDashboardProps> = () => {
           <CalendarApp />
         </div>
       </div>
+
+      <div>
+      <Messages />
+      </div>
+
 
       </div>
     // </div>
