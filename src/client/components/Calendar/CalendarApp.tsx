@@ -51,9 +51,6 @@ class CalendarApp extends Component<ICalendarAppProps> {
     render() {
         return (
             <>
-                <div className="divcenter col-10">
-                    < CreateEvent />
-                </div>
                 <div className="CalendarContainer my-2 mx-2 py-2 px-2">
                     <Calendar
                         defaultDate={moment().toDate()}
