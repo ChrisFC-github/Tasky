@@ -7,7 +7,15 @@ import remindersRouter from "./reminders";
 import messagesRouter from "./messages";
 import tasksRouter from "./tasks";
 
+
 const router = express.Router();
+const cors = require("cors");
+const helmet = require("helmet");
+
+router.use(helmet());
+router.use(cors({ origin: "http://localhost:3000" }));
+router.use(express.json());
+
 
 router.use("/events", eventsRouter);
 router.use("/users", usersRouter);

@@ -62,12 +62,6 @@ class App extends Component<IAppProps> {
                         onSelectEvent={}
                     />
                 </div>
-
-
-
-                <div>
-                    < CreateEvent />
-                </div>
             </>
 
         );

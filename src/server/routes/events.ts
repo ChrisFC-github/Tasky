@@ -5,6 +5,9 @@ import * as moment from "moment";
 import db from "../db";
 
 const router = express.Router();
+const { checkJwt } = require("../check-jwt");
+
+// to add authentication add " checkJwt," before async
 
 router.get("/", async (req, res) => {
     try {
@@ -42,6 +45,11 @@ router.post("/", async (req, res) => {
         let date = moment(req.body.date).format();
         let start = moment(req.body.start).format();
         let end = moment(req.body.end).format();
+<<<<<<< HEAD
+=======
+        console.log(start);
+        console.log(end);
+>>>>>>> main
         console.log(date);
         console.log(req.body)
         res.json(await db.Events.createEvent(req.body.title, req.body.location, date, start, end));
