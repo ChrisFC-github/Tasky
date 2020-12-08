@@ -7,8 +7,7 @@ const router = express.Router();
 
 router.get("/", async (req, res) => {
     try {
-        const mandatorytask = 1;
-        const data = await db.Events.getAlltasks(mandatorytask)
+        const data = await db.Tasks.getAlltasks()
         res.json(data);
     } catch (err) {
         console.log(err);
@@ -18,9 +17,8 @@ router.get("/", async (req, res) => {
 
 router.get("/:reqeventid", async (req, res) => {
     try {
-        const mandatorytask = 1;
         const eventid = req.params.reqeventid;
-        const data = await db.Events.getspecTask(eventid, mandatorytask);
+        const data = await db.Tasks.getspecTask(eventid);
         res.send(data[0]);
     } catch (err) {
         console.log(err);
@@ -31,7 +29,7 @@ router.get("/:reqeventid", async (req, res) => {
 router.delete("/:reqeventid", async (req, res) => {
     try {
         const eventid = req.params.reqeventid;
-        await db.Events.deleteTask(eventid);
+        await db.Tasks.deleteTask(eventid);
         res.send(`event task ${eventid} was deleted`);
     } catch (err) {
         console.log(err);
