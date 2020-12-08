@@ -40,9 +40,11 @@ router.post("/", async (req, res) => {
 
         // console.log(start);
         let date = moment(req.body.date).format();
+        let start = moment(req.body.start).format();
+        let end = moment(req.body.end).format();
         console.log(date);
         console.log(req.body)
-        res.json(await db.Events.createEvent(req.body.title, req.body.location, req.body.date, req.body.start, req.body.end));
+        res.json(await db.Events.createEvent(req.body.title, req.body.location, date, start, end));
         
         res.status(200).send(`
         ${req.body.title} Event has been created
