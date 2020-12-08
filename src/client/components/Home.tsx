@@ -82,7 +82,7 @@ const TaskyHome: React.FC<ITaskyHomeProps> = () => {
             <div className="home-pg-footer-image-container">
                 <img className="footer-img" src="./assets/chaos-img.png" alt="chaos-IMG"/>
                 <img className="footer-arrow-img" src="./assets/arrow.png" alt="Header-IMG"/>
-                <img className="footer-img" src="./assets/dashboard-img.png" alt="dashboard-IMG"/>
+                <img className="footer-img" src="./assets/interface.png" alt="dashboard-IMG"/>
             </div>
             <div className="footer">
                 <p className="footer-text">©TASKYCALENDARAPP.COM</p>
