@@ -5,6 +5,9 @@ import * as moment from "moment";
 import db from "../db";
 
 const router = express.Router();
+const { checkJwt } = require("../check-jwt");
+
+// to add authentication add " checkJwt," before async
 
 router.get("/", async (req, res) => {
     try {

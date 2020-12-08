@@ -3,7 +3,11 @@ import * as express from "express";
 import { OkPacket } from "mysql";
 import db from "../db";
 
+
 const router = express.Router();
+const { checkJwt } = require("../check-jwt");
+
+// to add authentication add " checkJwt," before async
 
 router.get("/:reqrelationid", async (req, res) => {
     try {
