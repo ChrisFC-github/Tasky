@@ -40,7 +40,7 @@ export default class newEvent extends React.Component<IAppProps, IAppState> {
                 {/* <input id="username-input" className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ completedtask: e.target.value }) }} value={this.state.completedtask}></input>
                 <input id="username-input" className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ relationid: e.target.value }) }} value={this.state.relationid}></input>
                 <input id="username-input" className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ childnum: e.target.value }) }} value={this.state.childnum}></input> */}
-                <button className="add-event-btn" type="submit" onClick={() => this.submitEvent(this.state.title, this.state.location, this.state.time, this.state.duedate, this.state.mandatorytask, this.state.completedtask, this.state.relationid, this.state.childnum)}>
+                <button className="add-event-btn" type="submit" onClick={() => this.submitEvent(this.state.title, this.state.location, this.state.duedate, this.state.mandatorytask, this.state.completedtask, )}>
                     Submit Event!
                         </button>
             </div>
