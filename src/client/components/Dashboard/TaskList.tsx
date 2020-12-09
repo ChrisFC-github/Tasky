@@ -21,11 +21,12 @@ const TaskList = () => {
     return (
 
         
-  <div className="task-list justify-content-center text-center mx-5">
-      <h2>Tommy's Tasks For Today</h2>
-  <div className="d-flex justify-content-left list-group-flush bulletPoints">
-  {events.map((events) => (<TaskCard events={events} key={events.id} />))}
-  </div>
+  <div className="task-card row justify-content-center align-items-center">
+      {/* <h4 >Tommy's Tasks</h4> */}
+      <img className="task-containter-logo" src="../assets/task-logo.png" alt=""/>
+      <div className="task-list-container scroller">
+      {events.map((events) => (<TaskCard events={events} key={events.id} />))}
+      </div>
   </div>
   
     )

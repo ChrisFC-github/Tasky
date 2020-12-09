@@ -25,7 +25,8 @@ const removeEvent = (eventid) => Query(`DELETE FROM events WHERE events.id = ?;`
 
 const mandatoryEvents = () => Query(`
 SELECT * FROM events
-WHERE mandatorytask = 1;
+WHERE mandatorytask = 1
+ORDER BY start;
 `);
 
 export default {

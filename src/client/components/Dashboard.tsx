@@ -23,14 +23,6 @@ const Dashboard: React.FC<IDashboardProps> = () => {
         </div>
       </div>
 
-      <div className="row display-flex mx-1 my-5">
-        <div className="col-12">
-          <CreateEvent />
-        </div>
-      </div>
-      
-
-
       {/* <div className="row display-flex mx-1 my-5">
         <div className="col-6">
           <Messages />
@@ -38,17 +30,20 @@ const Dashboard: React.FC<IDashboardProps> = () => {
         </div> */}
 
 
-        <div className="row">
+        <div className="row display-flex mx-1 my-5">
           <div className="col-6">
           <TaskList />
-          
           </div>
-          
           <div className="col-6">
-          {/* <TaskList /> */}
           <RemindersCell />
           </div>
         </div>
+
+        <div className="row display-flex mx-1 my-5">
+        <div className="col-12">
+          <CreateEvent />
+        </div>
+      </div>
 
         
         <div className="row display-flex mx-1 my-5">
@@ -57,9 +52,9 @@ const Dashboard: React.FC<IDashboardProps> = () => {
         </div>
       </div>
 
-      <div>
+      {/* <div>
       <Messages />
-      </div>
+      </div> */}
 
 
       </div>
