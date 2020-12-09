@@ -77,12 +77,12 @@ const TaskyHome: React.FC<ITaskyHomeProps> = () => {
             <div className="home-pg-middle-text-container">
                 <h3 className="bringing-balance-text justify-content-center">Bringing balance to our new work and learn from home lives.</h3>
                 <h4 className="free-text justify-content-center">And the best part is... it’s completely free...
-                <a className="home-sign-up-text" href="/signup"></a>sign up now!</h4>
+                <a className="home-sign-up-text" href="/signup">sign up now!</a></h4>
             </div>
             <div className="home-pg-footer-image-container">
                 <img className="footer-img" src="./assets/chaos-img.png" alt="chaos-IMG"/>
                 <img className="footer-arrow-img" src="./assets/arrow.png" alt="Header-IMG"/>
-                <img className="footer-img" src="./assets/dashboard-img.png" alt="dashboard-IMG"/>
+                <img className="footer-img" src="./assets/interface.png" alt="dashboard-IMG"/>
             </div>
             <div className="footer">
                 <p className="footer-text">©TASKYCALENDARAPP.COM</p>
