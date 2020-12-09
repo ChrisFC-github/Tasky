@@ -66,7 +66,7 @@ const EditEvent: React.FC<IEditProps> = (props: IEditProps) => {
             console.log('event not deleted');
         }
     };
-
+    // default values not working on date/time inputs below
     return (
         <div className="editEventContainer">
             <h1>Edit Event</h1>
