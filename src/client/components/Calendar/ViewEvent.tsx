@@ -69,7 +69,7 @@ const EditEvent: React.FC<IEditProps> = (props: IEditProps) => {
 
     return (
         <div className="editEventContainer">
-            <h1>Edit Reminder</h1>
+            <h1>Edit Event</h1>
             {/* <textarea rows={3} cols={50}  className="reminder-edit-text-area card-text" defaultValue={title} onChange={(e) => handleTitleChange(e)}></textarea> */}
             <input id="title-input" defaultValue={title} className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e) => handleTitleChange(e)}></input> 
                     <input id="location-input" defaultValue={location} className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e) => handleLocationChange(e)} />

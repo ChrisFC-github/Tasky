@@ -8,7 +8,7 @@ import Profile from "../components/Auth0/Profile";
 import CalendarApp from "./Calendar/CalendarApp";
 import CreateEvent from "./Dashboard/Events/CreateEvent";
 
-const Dashboard: React.FC<IDashboardProps> = () => {
+const Dashboard: React.FC<IDashboardProps> = props => {
   return (
     <div className="container">
       {/* <div className="row display-flex mx-1 my-5">
@@ -48,7 +48,7 @@ const Dashboard: React.FC<IDashboardProps> = () => {
         
         <div className="row display-flex mx-1 my-5">
         <div className="col-12">
-          <CalendarApp />
+          <CalendarApp history={props.history}/>
         </div>
       </div>
 

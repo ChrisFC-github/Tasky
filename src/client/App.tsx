@@ -40,14 +40,13 @@ const App: React.FC<IAppProps> = () => {
         {/* ALL ROUTES BELOW ARE PROTECTED ROUTES WHICH REQUIRE AUTH via UserLogin */}
         <PrivateRoute path="/logout" component={LogOutPage} />
         <Route exact path="/dashboard" component={Dashboard} />
-        <Route exact path="/calendar" component={CalendarApp} />
         <Route exact path="/:id/edit" component={EditReminders} />
-        <Route exact path="/:id/editevent" component={ViewEvent} />
+        <Route exact path="/events/:id/editevent" component={ViewEvent} />
       </Switch>
     </Router>
   );
 };
 
-interface IAppProps {}
+interface IAppProps { }
 
 export default App;
