@@ -21,8 +21,13 @@ class App extends Component<IAppProps> {
                     duedate: ""
                 },
             ],
+            // refresh: false
         };
     }
+
+    // refreshCalendar = () => {
+    //     this.setState({ refresh: !this.state.refresh });
+    // }
 
     componentDidMount() {
         this.fetchEvents()
