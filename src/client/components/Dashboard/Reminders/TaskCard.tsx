@@ -11,7 +11,7 @@ const TaskCard: React.FC<IEvents> = (props) => {
     return (
         
             <li className="task-list-group-item"> 
-            {props.events.title}: {moment(props.events.date).add(0, 'days').calendar()}
+            {props.events.title}: {moment(props.events.start).add(0, 'days').calendar()}
             </li>
       
     )

@@ -14,6 +14,7 @@ import Navbar from "./components/Dashboard/Navbar";
 import LoginButton from "../client/components/Auth0/LoginButton";
 import LogoutButton from "../client/components/Auth0/LogoutButton";
 import CalendarButton from "../client/components/Auth0/CalendarButton";
+import ViewEvent from './components/Calendar/ViewEvent';
 
 const App: React.FC<IAppProps> = () => {
   return (
@@ -39,6 +40,7 @@ const App: React.FC<IAppProps> = () => {
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/calendar" component={CalendarApp} />
         <Route exact path="/:id/edit" component={EditReminders} />
+        <Route exact path="/events/:id/editevent" component={ViewEvent} />
       </Switch>
     </Router>
   );
