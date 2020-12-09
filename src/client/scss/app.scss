@@ -31,24 +31,29 @@
     .generic-div {
       height: 20em;
       width: 32em;
-      box-shadow: -8px 20px 30px 10px rgb(181, 181, 181);
+      box-shadow: -10px 5px 30px 8px rgb(230, 230, 230);
       border-radius: 10px;
       margin: 3em;
       padding: 3em;
     }
+
+    .generic-div:hover {
+      border: solid #E68568 2px;
+    }
+
     .task-div {
       background-color: rgb(34, 34, 34);
       margin-top: 3em;
       height: 30em;
       width: 20em;
-      box-shadow: -8px 20px 30px 10px rgb(181, 181, 181);
+      box-shadow: -10px 5px 30px 8px rgb(230, 230, 230);
       border-radius: 10px;
     }
     .reminder-div {
       margin-top: 3em;
       height: 30em;
       width: 20em;
-      box-shadow: -8px 20px 30px 10px rgb(181, 181, 181);
+      box-shadow: -10px 5px 30px 8px rgb(230, 230, 230);
       border-radius: 10px;
       margin-bottom: 2em;
     }
@@ -87,20 +92,20 @@
       padding: 3em;
       height: 24em;
       width: 32em;
-      box-shadow: -8px 20px 30px 10px rgb(181, 181, 181);
+      box-shadow: -10px 5px 30px 8px rgb(230, 230, 230);
       border-radius: 10px;
     }
     .modal-dialog {
-      box-shadow: -8px 20px 30px 10px rgb(181, 181, 181);
+      box-shadow: -10px 5px 30px 8px rgb(230, 230, 230);
       border-radius: 10px;
     }
-    .task-list{
-      padding: 2em;
-      width: 14em;
-      margin: 1em;
-      border: solid rgb(182, 182, 182) 1px;
-      border-radius: 10px;
-    }
+    // .task-list{
+    //   padding: 2em;
+    //   width: 14em;
+    //   margin: 1em;
+    //   border: solid rgb(182, 182, 182) 1px;
+    //   border-radius: 10px;
+    // }
     .card-img-top {
       height: 70px;
       width: auto;
@@ -265,9 +270,23 @@
 
   // create event styling
 
+  .form-check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // margin: 2em;
+  }
+
+  .mand {
+    color: black;
+    float: left;
+    margin-bottom: 80px;
+  }
+
 .create-event-container {
   background-color: #ffffff;
-  box-shadow: -8px 20px 30px 10px rgb(167, 167, 167);
+  box-shadow: -10px 5px 30px 8px rgb(230, 230, 230);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -298,7 +317,7 @@
 
 .message-board {
   background-color: #ffffff;
-  box-shadow: -8px 20px 30px 10px rgb(210, 210, 210);
+  box-shadow: -10px 5px 30px 8px rgb(230, 230, 230);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -364,23 +383,62 @@
 
 .task-card {
   background-color: rgb(255, 255, 255);
-  color: #414141;
-  box-shadow: -8px 20px 30px 10px rgb(181, 181, 181);
+  box-shadow: -10px 5px 30px 8px rgb(230, 230, 230);
   border-radius: 10px;
-  margin: 3em;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 6px;
+  height: 23em;
+}
+
+// .bulletPoints {
+//   justify-content: center;
+//   align-items: center;
+//   display: flex;
+//   flex-direction: column;
+//   margin-bottom: 100px;
+// }
+
+.scroller {
+  overflow-y: auto;
+
+}
+
+.task-list-group-item {
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.task-title {
-  background-color: red;
+.task-list-group-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid rgb(225, 225, 225) 1px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  
 }
 
-.list-group-item {
+.task-list {
   background-color: rgb(255, 255, 255);
-  color: #414141;
+  box-shadow: -10px 5px 30px 8px rgb(230, 230, 230);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.task-containter-logo {
+  height: 100px;
+  width: auto;
+  margin-left: 50px;
 }
 
 .card-body {
@@ -395,7 +453,7 @@
 
 .reminders-card {
   background-color: rgb(255, 255, 255);
-  box-shadow: -8px 20px 30px 10px rgb(181, 181, 181);
+  box-shadow: -10px 5px 30px 8px rgb(230, 230, 230);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -441,7 +499,7 @@
 .editReminderContainer {
   height: 20em;
   width: 30em;
-  box-shadow: -8px 20px 30px 10px rgb(181, 181, 181);
+  box-shadow: -10px 5px 30px 8px rgb(230, 230, 230);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -574,7 +632,7 @@
 
 .CalendarContainer {
   background-color: #FFFFFF;
-  box-shadow: -8px 20px 30px 10px rgb(206, 206, 206);
+  box-shadow: -10px 5px 30px 8px rgb(230, 230, 230);
   border-radius: 10px;
   padding: 1em;
   margin-bottom: 2em;

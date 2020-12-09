@@ -23,36 +23,42 @@ const Dashboard: React.FC<IDashboardProps> = () => {
         </div>
       </div>
 
-      <div className="row display-flex mx-1 my-5">
+      {/* <div className="row display-flex mx-1 my-5">
+        <div className="col-6">
+          <Messages />
+          <Schedule />
+        </div> */}
+
+
+        <div className="row display-flex mx-1 my-5">
+          <div className="col-6">
+          <TaskList />
+          </div>
+          <div className="col-6">
+          <RemindersCell />
+          </div>
+        </div>
+
+        <div className="row display-flex mx-1 my-5">
         <div className="col-12">
           <CreateEvent />
         </div>
       </div>
 
-     
-      <div className="row">
-            <div className="col-6">
-              <TaskList />
-            </div>
-            <div className="col-6">
-              <RemindersCell />
-            </div>
-      </div>
-     
-     
-      <div className="row display-flex mx-1 my-5">
+        
+        <div className="row display-flex mx-1 my-5">
         <div className="col-12">
           <CalendarApp />
         </div>
       </div>
-    
-    <div>
-    <Messages />
-    </div>
-    
-    </div>
-      
-    
+
+      {/* <div>
+      <Messages />
+      </div> */}
+
+
+      </div>
+    // </div>
   );
 };
 

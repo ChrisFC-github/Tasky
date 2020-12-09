@@ -19,6 +19,16 @@ router.get("/", async (req, res) => {
     }
 });
 
+router.get('/mandatory', async (req, res) => {
+    try {
+        const data = await db.Events.mandatoryEvents();
+        res.json(data);
+    } catch (err) {
+        console.log(err);
+        res.status(500).send(err);
+    }
+})
+
 router.get("/:reqeventid", async (req, res) => {
     try {
         const eventid = req.params.reqeventid;
@@ -45,13 +55,18 @@ router.post("/", async (req, res) => {
         let date = moment(req.body.date).format();
         let start = moment(req.body.start).format();
         let end = moment(req.body.end).format();
+        if (req.body.mandatorytask) {
+            const isMandatory = 1;
+            res.status(200).json(await db.Events.createEvent(req.body.title, req.body.location, date, start, end, isMandatory));
+        } else {
+            const isMandatory = 0;
+            res.status(200).json(await db.Events.createEvent(req.body.title, req.body.location, date, start, end, isMandatory));
+        }
+        console.log(start);
+        console.log(end);
         console.log(date);
         console.log(req.body)
-        res.json(await db.Events.createEvent(req.body.title, req.body.location, date, start, end));
-        
-        res.status(200).send(`
-        ${req.body.title} Event has been created
-        `);
+       
     } catch (err) {
         console.log(err);
         res.status(500).send(err);

@@ -36,9 +36,9 @@ const App: React.FC<IAppProps> = () => {
         <Route path="/createaccount" component={CreateAccount} />
         {/* ALL ROUTES BELOW ARE PROTECTED ROUTES WHICH REQUIRE AUTH via UserLogin */}
         <PrivateRoute path="/logout" component={LogOutPage} />
-        <PrivateRoute exact path="/dashboard" component={Dashboard} />
-        <PrivateRoute exact path="/calendar" component={CalendarApp} />
-        <PrivateRoute exact path="/:id/edit" component={EditReminders} />
+        <Route exact path="/dashboard" component={Dashboard} />
+        <Route exact path="/calendar" component={CalendarApp} />
+        <Route exact path="/:id/edit" component={EditReminders} />
       </Switch>
     </Router>
   );
