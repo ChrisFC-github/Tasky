@@ -73,7 +73,7 @@ class App extends Component<IAppProps> {
                         events={this.state.events}
                         localizer={localizer}
                         style={{ height: "100vh" }}
-                        // onSelectEvent={this.props.history.push(`/events/${id}/editevent`)}
+                        onSelectEvent={this.props.history.push(`/events/${id}/editevent`)}
                     />
                 </div>
             </>
