@@ -28,7 +28,7 @@ export default class newEvent extends React.Component<IAppProps, IAppState> {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ title: title, location: location, date: date, start: start, end: end, mandatorytask: mandatorytask })
         })
-        //   .then(res => this.props.history.push("/dashboard"))
+            .then(res => this.props.triggerRefresh())
             .catch(err => console.log(err))
     }
     render() {
@@ -63,8 +63,8 @@ export default class newEvent extends React.Component<IAppProps, IAppState> {
         )
     }
 }
-interface IAppProps extends RouteComponentProps<{ title: string }> {
-}
+interface IAppProps extends RouteComponentProps<{ title: string }> {}
+
 interface IAppState {
     title: string,
     location: string,
@@ -75,5 +75,5 @@ interface IAppState {
     mandatorytask: boolean,
   //  completedtask: string,
     //relationid: string,
-    //childnum: string
+    //childnum: string,
 }
