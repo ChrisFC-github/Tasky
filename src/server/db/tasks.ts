@@ -1,4 +1,4 @@
-
+// @ts-nocheck
 
 import { Query } from './index';
 

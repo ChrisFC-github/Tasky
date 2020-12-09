@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react'
 import { IEvents } from "../../../Utils/types";
 import singleEvent from "./singleEvent"

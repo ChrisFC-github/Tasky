@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react'
 import { RouteComponentProps } from "react-router-dom"
 import { IEvents } from '../../../Utils/types'

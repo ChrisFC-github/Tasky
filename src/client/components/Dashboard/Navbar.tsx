@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import '../../scss/app';
 import { createPopper } from '@popperjs/core/lib/popper-lite.js';

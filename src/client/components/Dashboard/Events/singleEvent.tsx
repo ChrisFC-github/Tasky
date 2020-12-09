@@ -1,3 +1,4 @@
+// @ts-nocheck
 // for clean commit only
 import React from 'react'
 // import { IEvents } from "../../utils/types"
