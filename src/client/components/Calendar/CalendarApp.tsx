@@ -21,17 +21,24 @@ class App extends Component<IAppProps> {
                     duedate: ""
                 },
             ],
-            // refresh: false
+            refresh: false
         };
     }
 
-    // refreshCalendar = () => {
-    //     this.setState({ refresh: !this.state.refresh });
-    // }
+    refreshCalendar = () => {
+        this.setState({ refresh: !this.state.refresh });
+    }
 
     componentDidMount() {
         this.fetchEvents()
-        
+
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.refresh !== prevProps.refresh) {
+            this.fetchEvents();
+        }
+        console.log('test');
     }
     fetchEvents = () => {
         fetch('/api/events')
@@ -65,7 +72,7 @@ class App extends Component<IAppProps> {
                         events={this.state.events}
                         localizer={localizer}
                         style={{ height: "100vh" }}
-                        onSelectEvent={}
+                        // onSelectEvent={this.props.history.push('/events/${id}')}
                     />
                 </div>
             </>

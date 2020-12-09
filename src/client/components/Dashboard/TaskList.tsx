@@ -4,7 +4,7 @@ import TaskCard from './Reminders/TaskCard'
 import '../../scss/app.scss'
 
 
-const TaskList = () => {
+const TaskList = (props) => {
     const [events, setEvents] = useState<IEvents[]>([]);
 
     useEffect(() => {
@@ -16,7 +16,7 @@ const TaskList = () => {
             }
         }
         getEvents();
-    }, []);
+    }, [props.refresh]);
 
     return (
 

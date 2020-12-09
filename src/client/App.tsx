@@ -16,6 +16,7 @@ import LogoutButton from "../client/components/Auth0/LogoutButton";
 import CalendarButton from "../client/components/Auth0/CalendarButton";
 
 const App: React.FC<IAppProps> = () => {
+  
   return (
     <Router>
       <nav className="navbar sticky-top navbar">
