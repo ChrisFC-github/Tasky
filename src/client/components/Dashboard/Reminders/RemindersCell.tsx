@@ -25,7 +25,7 @@ const newReminder = async () => {
         },
         body: JSON.stringify(reminder)
     })
-    history.push('/dashboard');
+    location.reload();
     if(res.ok) {
         console.log('reminder posted');
        

@@ -3,7 +3,7 @@ import React from "react";
 import RemindersCell from "../components/Dashboard/Reminders/RemindersCell";
 // import Schedule from "./Dashboard/Events/Schedule";
 import Messages from "../components/Dashboard/Messages";
-// import TaskList from "../components/Dashboard/TaskList";
+import TaskList from "../components/Dashboard/TaskList";
 import Profile from "../components/Auth0/Profile";
 import CalendarApp from "./Calendar/CalendarApp";
 import CreateEvent from "./Dashboard/Events/CreateEvent";
@@ -23,14 +23,6 @@ const Dashboard: React.FC<IDashboardProps> = () => {
         </div>
       </div>
 
-      <div className="row display-flex mx-1 my-5">
-        <div className="col-12">
-          <CreateEvent />
-        </div>
-      </div>
-      
-
-
       {/* <div className="row display-flex mx-1 my-5">
         <div className="col-6">
           <Messages />
@@ -38,17 +30,20 @@ const Dashboard: React.FC<IDashboardProps> = () => {
         </div> */}
 
 
-        <div className="row">
+        <div className="row display-flex mx-1 my-5">
           <div className="col-6">
-          {/* <TaskList /> */}
-          <Messages />
+          <TaskList />
           </div>
-          
           <div className="col-6">
-          {/* <TaskList /> */}
           <RemindersCell />
           </div>
         </div>
+
+        <div className="row display-flex mx-1 my-5">
+        <div className="col-12">
+          <CreateEvent />
+        </div>
+      </div>
 
         
         <div className="row display-flex mx-1 my-5">
@@ -56,6 +51,11 @@ const Dashboard: React.FC<IDashboardProps> = () => {
           <CalendarApp />
         </div>
       </div>
+
+      {/* <div>
+      <Messages />
+      </div> */}
+
 
       </div>
     // </div>

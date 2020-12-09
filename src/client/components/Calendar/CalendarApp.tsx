@@ -7,8 +7,8 @@ import CreateEvent from '../Dashboard/Events/CreateEvent'
 const localizer = momentLocalizer(moment);
 // const DnDCalendar = withDragAndDrop(Calendar);
 
-class CalendarApp extends Component<ICalendarAppProps> {
-    constructor(props: ICalendarAppProps) {
+class App extends Component<IAppProps> {
+    constructor(props: IAppProps) {
         super(props);
         this.state = {
             events: [
@@ -21,11 +21,24 @@ class CalendarApp extends Component<ICalendarAppProps> {
                     duedate: ""
                 },
             ],
+            refresh: false
         };
+    }
+
+    refreshCalendar = () => {
+        this.setState({ refresh: !this.state.refresh });
     }
 
     componentDidMount() {
         this.fetchEvents()
+
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.refresh !== prevProps.refresh) {
+            this.fetchEvents();
+        }
+        console.log('test');
     }
     fetchEvents = () => {
         fetch('/api/events')
@@ -55,10 +68,11 @@ class CalendarApp extends Component<ICalendarAppProps> {
                     <Calendar
                         defaultDate={moment().toDate()}
                         defaultView="month"
+                        views={["month", "week", "day", "agenda"]}
                         events={this.state.events}
                         localizer={localizer}
                         style={{ height: "100vh" }}
-                        onSelectEvent={}
+                        // onSelectEvent={this.props.history.push('/events/${id}')}
                     />
                 </div>
             </>
@@ -67,9 +81,9 @@ class CalendarApp extends Component<ICalendarAppProps> {
     }
 }
 
-interface ICalendarAppProps { }
-interface ICalendarAppState {
+interface IAppProps { }
+interface IAppState {
     events: Array<object>
 }
 
-export default CalendarApp;
+export default App;
