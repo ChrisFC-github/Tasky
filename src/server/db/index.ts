@@ -7,7 +7,7 @@ import Reminders from "./reminders";
 import Messages from "./messages";
 import Tasks from "./tasks";
 
-  export const Connection = mysql.createConnection({
+  export const Connection = mysql.createPool({
     host: "us-cdbr-east-02.cleardb.com",
     port: 3306,
     user: "b742c71a1c0af7",
