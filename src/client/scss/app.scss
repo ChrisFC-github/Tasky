@@ -502,6 +502,35 @@
   margin-left: 420px;
 }
 
+.editEventContainer {
+  box-shadow: -10px 5px 30px 8px rgb(230, 230, 230);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3em;
+}
+
+.second-edit-event-btn {
+  background-color: #E68568;
+  margin: 20px;
+  border: solid #E68568 5px;
+  border-radius: 5px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-delete-event-btn {
+  background-color: #E68568;
+  border: solid #E68568 5px;
+  border-radius: 5px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+}
+
+
 .second-edit-reminder-btn {
   background-color: #E68568;
   margin: 20px;

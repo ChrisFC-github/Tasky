@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState } from "react";
 const Message = () => {
   const [content, changeContent] = useState([])

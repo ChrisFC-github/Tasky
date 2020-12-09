@@ -1,3 +1,4 @@
+// @ts-nocheck
 export interface IEvents {
     title: string,
     location: string,

@@ -1,15 +1,17 @@
+// @ts-nocheck
 import React, { Component } from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import withDragAndDrop from 'react-big-calendar/lib/addons/dragAndDrop';
 import CreateEvent from '../Dashboard/Events/CreateEvent'
 import { useHistory, RouteComponentProps, useParams } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
 
 const localizer = momentLocalizer(moment);
-// const DnDCalendar = withDragAndDrop(Calendar);
 
-class App extends Component<IAppProps> {
-    constructor(props: IAppProps) {
+
+class CalendarApp extends Component<ICalendarAppProps> {
+    constructor(props: ICalendarAppProps) {
         super(props);
         this.state = {
             events: [
@@ -26,13 +28,16 @@ class App extends Component<IAppProps> {
         };
     }
 
+    handleEventSelect = () =>{
+    }
+
     refreshCalendar = () => {
         this.setState({ refresh: !this.state.refresh });
     }
 
     componentDidMount() {
         this.fetchEvents()
-
+        console.log(this.props)
     }
 
     componentDidUpdate(prevProps) {
@@ -47,6 +52,7 @@ class App extends Component<IAppProps> {
             .then(data => this.setState({ events: data }))
             .catch(err => console.error(err))
     }
+  
 
     // onEventResize = (data) => {
     //     const { start, end } = data;
@@ -73,7 +79,8 @@ class App extends Component<IAppProps> {
                         events={this.state.events}
                         localizer={localizer}
                         style={{ height: "100vh" }}
-                        // onSelectEvent={this.props.history.push('/events/${id}')}
+                       onSelectEvent={(e)=>{this.props.history.push(`/events/${e.id}/editevent`)}}
+                        // onSelectEvent={props.history.push(`/events/${this.props.match.params.id}/editevent`)}
                     />
                 </div>
             </>
@@ -82,10 +89,9 @@ class App extends Component<IAppProps> {
     }
 }
 
-interface IAppProps extends RouteComponentProps<{id: string}> { }
-interface IAppState {
+interface ICalendarAppProps extends RouteComponentProps<{id: string}> { }
+interface ICalendarAppState {
     events: Array<object>
 }
 
-export default App;
-
+export default CalendarApp;

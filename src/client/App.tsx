@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as React from "react";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import RemindersCell from "./components/Dashboard//Reminders/RemindersCell";
@@ -15,6 +16,7 @@ import LoginButton from "../client/components/Auth0/LoginButton";
 import LogoutButton from "../client/components/Auth0/LogoutButton";
 import CalendarButton from "../client/components/Auth0/CalendarButton";
 import EditEvent from "./components/Calendar/ViewEvent";
+import ViewEvent from './components/Calendar/ViewEvent';
 
 const App: React.FC<IAppProps> = () => {
 
@@ -39,14 +41,13 @@ const App: React.FC<IAppProps> = () => {
         {/* ALL ROUTES BELOW ARE PROTECTED ROUTES WHICH REQUIRE AUTH via UserLogin */}
         <PrivateRoute path="/logout" component={LogOutPage} />
         <Route exact path="/dashboard" component={Dashboard} />
-        <Route exact path="/calendar" component={CalendarApp} />
         <Route exact path="/:id/edit" component={EditReminders} />
-        {/* <Route exact path="/:id/editevent" component={EditEvent} /> */}
+        <Route exact path="/events/:id/editevent" component={ViewEvent} />
       </Switch>
     </Router>
   );
 };
 
-interface IAppProps {}
+interface IAppProps { }
 
 export default App;

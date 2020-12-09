@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useHistory, RouteComponentProps, useParams } from 'react-router-dom';
@@ -11,7 +12,7 @@ const TaskCard: React.FC<IEvents> = (props) => {
     return (
         
             <li className="task-list-group-item"> 
-            {props.events.title}: {moment(props.events.date).add(0, 'days').calendar()}
+            {props.events.title}: {moment(props.events.start).add(0, 'days').calendar()}
             </li>
       
     )

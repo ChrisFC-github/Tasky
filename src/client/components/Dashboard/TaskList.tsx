@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import { useState, useEffect } from 'react';
 import TaskCard from './Reminders/TaskCard'
