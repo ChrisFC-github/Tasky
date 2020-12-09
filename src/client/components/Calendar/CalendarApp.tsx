@@ -3,6 +3,7 @@ import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import withDragAndDrop from 'react-big-calendar/lib/addons/dragAndDrop';
 import CreateEvent from '../Dashboard/Events/CreateEvent'
+import { useHistory, RouteComponentProps, useParams } from 'react-router-dom';
 
 const localizer = momentLocalizer(moment);
 // const DnDCalendar = withDragAndDrop(Calendar);
@@ -81,9 +82,10 @@ class App extends Component<IAppProps> {
     }
 }
 
-interface IAppProps { }
+interface IAppProps extends RouteComponentProps<{id: string}> { }
 interface IAppState {
     events: Array<object>
 }
 
 export default App;
+
