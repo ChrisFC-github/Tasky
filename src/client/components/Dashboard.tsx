@@ -1,5 +1,5 @@
 //for commit only
-import React from "react";
+import React, { useState } from "react";
 import RemindersCell from "../components/Dashboard/Reminders/RemindersCell";
 // import Schedule from "./Dashboard/Events/Schedule";
 import Messages from "../components/Dashboard/Messages";
@@ -9,6 +9,11 @@ import CalendarApp from "./Calendar/CalendarApp";
 import CreateEvent from "./Dashboard/Events/CreateEvent";
 
 const Dashboard: React.FC<IDashboardProps> = props => {
+
+  const [refresh, setRefresh] = useState<boolean>( false );
+
+  const triggerRefresh = () => setRefresh(!refresh);
+
   return (
     <div className="container">
       {/* <div className="row display-flex mx-1 my-5">
@@ -32,7 +37,7 @@ const Dashboard: React.FC<IDashboardProps> = props => {
 
         <div className="row display-flex mx-1 my-5">
           <div className="col-6">
-          <TaskList />
+          <TaskList refresh={refresh}/>
           </div>
           <div className="col-6">
           <RemindersCell />
@@ -41,14 +46,14 @@ const Dashboard: React.FC<IDashboardProps> = props => {
 
         <div className="row display-flex mx-1 my-5">
         <div className="col-12">
-          <CreateEvent />
+          <CreateEvent triggerRefresh={triggerRefresh}/>
         </div>
       </div>
 
         
         <div className="row display-flex mx-1 my-5">
         <div className="col-12">
-          <CalendarApp history={props.history}/>
+          <CalendarApp refresh={refresh} history={props.history}/>
         </div>
       </div>
 
