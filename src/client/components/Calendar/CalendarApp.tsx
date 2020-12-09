@@ -21,11 +21,24 @@ class App extends Component<IAppProps> {
                     duedate: ""
                 },
             ],
+            refresh: false
         };
+    }
+
+    refreshCalendar = () => {
+        this.setState({ refresh: !this.state.refresh });
     }
 
     componentDidMount() {
         this.fetchEvents()
+
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.refresh !== prevProps.refresh) {
+            this.fetchEvents();
+        }
+        console.log('test');
     }
     fetchEvents = () => {
         fetch('/api/events')
@@ -54,12 +67,12 @@ class App extends Component<IAppProps> {
                 <div className="CalendarContainer my-2 mx-2 py-2 px-2">
                     <Calendar
                         defaultDate={moment().toDate()}
-                        defaultView={'month'}
+                        defaultView="month"
                         views={["month", "week", "day", "agenda"]}
                         events={this.state.events}
                         localizer={localizer}
                         style={{ height: "100vh" }}
-                        onSelectEvent={}
+                        // onSelectEvent={this.props.history.push('/events/${id}')}
                     />
                 </div>
             </>
