@@ -14,9 +14,10 @@ import Navbar from "./components/Dashboard/Navbar";
 import LoginButton from "../client/components/Auth0/LoginButton";
 import LogoutButton from "../client/components/Auth0/LogoutButton";
 import CalendarButton from "../client/components/Auth0/CalendarButton";
+import EditEvent from "./components/Calendar/ViewEvent";
 
 const App: React.FC<IAppProps> = () => {
-  
+
   return (
     <Router>
       <nav className="navbar sticky-top navbar">
@@ -40,6 +41,7 @@ const App: React.FC<IAppProps> = () => {
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/calendar" component={CalendarApp} />
         <Route exact path="/:id/edit" component={EditReminders} />
+        {/* <Route exact path="/:id/editevent" component={EditEvent} /> */}
       </Switch>
     </Router>
   );
