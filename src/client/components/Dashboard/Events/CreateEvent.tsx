@@ -28,7 +28,7 @@ export default class newEvent extends React.Component<IAppProps, IAppState> {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ title: title, location: location, date: date, start: start, end: end, mandatorytask: mandatorytask })
         })
-        //   .then(res => this.props.history.push("/dashboard"))
+          .then(res => this.props.history.push("/dashboard"))
             .catch(err => console.log(err))
     }
     render() {

@@ -26,6 +26,7 @@ class App extends Component<IAppProps> {
 
     componentDidMount() {
         this.fetchEvents()
+        
     }
     fetchEvents = () => {
         fetch('/api/events')
