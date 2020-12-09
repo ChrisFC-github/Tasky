@@ -54,7 +54,7 @@ class App extends Component<IAppProps> {
                 <div className="CalendarContainer my-2 mx-2 py-2 px-2">
                     <Calendar
                         defaultDate={moment().toDate()}
-                        defaultView={'month'}
+                        defaultView="month"
                         views={["month", "week", "day", "agenda"]}
                         events={this.state.events}
                         localizer={localizer}
